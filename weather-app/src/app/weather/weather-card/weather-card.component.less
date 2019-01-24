@@ -1,0 +1,80 @@
+.wa-weather-card {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    height: 250px;
+    width: inherit;
+    margin-left: 2%;
+    margin-top: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wa-weather-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.wa-card-header {
+    display: grid;
+    grid-template-columns: Auto 20%; 
+    height: 48px;
+    border-bottom: solid 2px #3f51b5;
+    > .wa-card-delete {
+        margin: auto;
+    }
+    > .wa-card-title {
+        padding-left: 20px;
+        padding-top: 5px;
+        font-size: 30px;
+        font-style: bold;
+        font-weight: bold;
+    }
+}
+
+.wa-card-conent {
+    display: grid;
+    grid-template-rows: Auto 20% 15%;
+    height: 150px;
+    > div {
+        > div {
+            display: inline-block;
+            width: 33%;
+            text-align: center;
+            font-size: 10px;
+        }
+        > span {
+            text-align: center;
+            display: inline-block;
+            height: inherit;
+            width: 33%;
+            vertical-align: middle; 
+        }
+    }
+}
+
+.wa-image {
+    text-align: center; 
+    padding-top: 10px;
+    > img {
+        height: 60px;
+        width: 60px;
+    }
+}
+
+.wa-temprature-text {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.wa-card-footer {
+    display: grid;
+    grid-template-rows: 60% auto;
+    height: 50px;
+    color: white;
+    background-color: #3f51b5;
+    text-align: center;
+    > div {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}

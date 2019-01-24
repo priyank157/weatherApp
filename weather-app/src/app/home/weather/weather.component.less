@@ -1,0 +1,44 @@
+.wa-add-weather-card {
+    height: 200px;
+    width: 200px;
+    margin-left: 2%;
+    margin-top: 2%;
+    text-align: center;
+}
+
+.wa-no-data {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 50;
+    font-style: italic;
+    font-size: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+.wa-weather-board {
+    display: grid; 
+    grid-template-columns: 25% 25% 25% 25%; 
+    margin: auto; 
+    width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .wa-weather-board {
+        .wa-weather-board();
+        grid-template-columns: 33% 33% 34%;
+    };
+};
+
+@media only screen and (max-width: 750px) {
+    .wa-weather-board {
+        .wa-weather-board();
+        grid-template-columns: 50% 50%;
+    };
+};
+
+@media only screen and (max-width: 600px) {
+    .wa-weather-board {
+        .wa-weather-board();
+        grid-template-columns: 100%;
+    };
+};

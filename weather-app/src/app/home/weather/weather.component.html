@@ -1,0 +1,8 @@
+<mat-card class="wa-no-data" *ngIf="!isCityToDisplay">
+    Select a city for weather...
+</mat-card>
+<div *ngIf="true" class="wa-weather-board">
+    <div *ngFor="let weatherData of weatherDataList" >
+        <app-weather-card [weatherData]="weatherData" (deleteCard)="deleteCardClicked($event)"></app-weather-card>
+    </div>
+</div>

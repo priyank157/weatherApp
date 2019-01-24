@@ -1,0 +1,27 @@
+<div class="wa-search-box">
+  <div class="wa-search-field">
+    <form>
+    <mat-form-field>
+      <input matInput 
+             type="text" 
+             placeholder="Search location" 
+             aria-label="City" 
+             [formControl]="searchInputControl" 
+             [matAutocomplete]="auto"
+             (keyup)="searchInputLocation()"/>
+      <mat-autocomplete #auto="matAutocomplete"
+                        (optionSelected)="citySelected($event)"
+                        (opened)="clearSelectedValue()">
+        <mat-option *ngFor="let option of options$ | async" 
+                    [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    </form>
+  </div>
+  <div class="wa-search-buttons">
+    <button mat-flat-button disabled *ngIf="!value">Search</button>
+    <button mat-flat-button color="primary" (click)="search()" *ngIf="value">Search</button>
+  </div>
+</div>

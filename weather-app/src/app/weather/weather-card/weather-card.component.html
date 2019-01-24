@@ -1,0 +1,39 @@
+<div class="wa-weather-card">
+  <div class="wa-card-header">
+    <div class="wa-card-title">{{weatherData.cityName}}</div>
+    <div class="wa-card-delete">
+      <button mat-button matSuffix mat-icon-button aria-label="Clear" (click)="deleteCardClicked()">
+        <mat-icon>close</mat-icon>
+      </button></div>
+  </div>
+  <div class="wa-card-conent">
+    <div class="wa-image">
+      <img src="{{weatherData.icon}}" height="60px" width="60px"/>
+      <figcaption>{{weatherData.main}}</figcaption>
+    </div>
+    <div>
+      <span class="wa-temprature-text">{{weatherData.currentTemp}}</span>
+      <span class="wa-temprature-text">{{weatherData.minTemp}}</span>
+      <span class="wa-temprature-text">{{weatherData.maxTemp}}</span>
+    </div>
+    <div>
+        <div>Now</div>
+        <div>Min</div>
+        <div>Max</div>
+      </div>
+  </div>
+  <div class="wa-card-footer">
+    <div style="font-size: 20px; padding-top: 5px;">
+      <div>{{weatherData.wind.speed}}</div>
+      <div>{{weatherData.pressure}}</div>
+      <div>{{weatherData.humidity}}</div>
+      <div>{{weatherData.visibility}}</div>
+    </div>
+    <div style="font-size: 10px;">
+      <div>Wind</div>
+      <div>Pressure</div>
+      <div>Humidity</div>
+      <div>Visibility</div>
+    </div>
+  </div>
+</div>
