@@ -12,7 +12,6 @@ export class WeatherAdapterService {
   constructor(private http: HttpClient) { }
 
   retrieveWeatherOfCity(cityName: string) {
-    // URL = `http://api.openweathermap.org/data/2.5/weather?q=${cityName.replace(/\s/g, '')}&APPID=8822b206bd95f032fa34951362e6e5b3`;
     const URL = 'http://localhost:3000/weather';
     return new Observable((subscriber) => {
       this.http.get(URL)
